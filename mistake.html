@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPITUPP</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden; /* Prevent scroll while loading */
+        }
+
+        /* Loader container */
+        .loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* TOPITUPP letters */
+        .letters {
+            display: flex;
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: 10px;
+        }
+
+        .letters span {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+        }
+
+        /* Words appearing below */
+        .words {
+            font-size: 1rem;
+            margin-top: 10px;
+            display: flex;
+            gap: 14px;
+        }
+
+        .words span {
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        /* "BY SALT" styling */
+        .by-salt {
+            font-size: 0.9rem;
+            font-weight: 300;
+            opacity: 0;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            animation: fadeIn 1s forwards;
+            animation-delay: 2.5s;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hide loader after animation */
+        .hide-loader {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Main content (hidden initially) */
+        .main-content {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="letters">
+            <span style="animation-delay: 0s;">T</span>
+            <span style="animation-delay: 0.3s;">O</span>
+            <span style="animation-delay: 0.6s;">P</span>
+            <span style="animation-delay: 0.9s;">I</span>
+            <span style="animation-delay: 1.2s;">T</span>
+            <span style="animation-delay: 1.5s;">U</span>
+            <span style="animation-delay: 1.8s;">P</span>
+            <span style="animation-delay: 2.1s;">P</span>
+        </div>
+
+        <div class="words">
+            <span style="animation-delay: 0.3s;">Tidy</span>
+            <span style="animation-delay: 0.6s;">Organize</span>
+            <span style="animation-delay: 0.9s;">Purge</span>
+            <span style="animation-delay: 1.2s;">Improve</span>
+            <span style="animation-delay: 1.5s;">Transform</span>
+            <span style="animation-delay: 1.8s;">Unclutter</span>
+            <span style="animation-delay: 2.1s;">Prioritize</span>
+            <span style="animation-delay: 2.4s;">Perfect</span>
+        </div>
+
+        <div class="by-salt">BY SALT</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <nav>
+                <a href="">Home</a>
+                <a href="">Contacts</a>
+                <a href="">Info</a>
+            </nav>
+        </header>
+
+        <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="image/img1.jpg">
+                <div class="content">
+                    <div class="author">BY SALT</div>
+                    <div class="title">TOPITUPP</div>
+                    <div class="topic">Declutter. Resell. Refresh.</div>
+                    <div class="des">
+                        At Topitupp by Salt, we help you transform your wardrobe by decluttering, reselling, and curating timeless pre-loved fashion. 
+                        Whether you need to free up space, make extra cash, or shop sustainable pieces, we’ve got you covered.
+                        <br><br>
+                        ✔ Curated pre-loved pieces for every wardrobe <br>
+                        ✔ Declutter & organize effortlessly <br>
+                        ✔ Resell, donate, or refresh your closet <br><br>
+                        📍 DM to shop or collaborate! <br>
+                        📞 Contact Us: 08035242723 <br>
+                        📍 Instagram: @topitupp.bysalt
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/img2.jpg">
+                <div class="content">
+                    <div class="author">BY SALT</div>
+                    <div class="title">ABOUT US</div>
+                    <div class="topic">Elegant. Timeless. Sustainable.</div>
+                    <div class="des">
+                        At Topitupp by Salt, we believe that fashion should be effortless and sustainable. 
+                        A cluttered wardrobe can be overwhelming, and that’s where we come in! <br><br>
+                        ✔ Declutter & organize wardrobes for a fresh start. <br>
+                        ✔ Resell stylish, high-quality outfits, shoes, and accessories. <br>
+                        ✔ Shop from our curated selection of elegant, pre-loved fashion. <br>
+                        ✔ Donate gently used clothing to those in need. <br><br>
+                        Fashion is a journey, and we’re here to make yours more intentional, stylish, and sustainable. <br><br>
+                        📍 Let’s Work Together
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/img3.jpg">
+                <div class="content">
+                    <div class="author">BY SALT</div>
+                    <div class="title">PORTFOLIO</div>
+                    <div class="topic">Transforming Wardrobes, One Piece at a Time</div>
+                    <div class="des">
+                        See how we’ve helped clients reclaim their space, refresh their style, and give their fashion pieces a second life. <br><br>
+                        🛍 Wardrobe Decluttering Projects – Before & after transformations. <br>
+                        💼 Resale Success Stories – Items sold & earnings made for clients. <br>
+                        ❤️ Giving Back – Donations to charities & those in need. <br><br>
+                        📍 View More
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/img4.jpg">
+                <div class="content">
+                    <div class="author">BY SALT</div>
+                    <div class="title">SERVICES</div>
+                    <div class="topic">Wardrobe Decluttering & Organization</div>
+                    <div class="des">
+                        We help you sort, organize, and refresh your wardrobe—without the stress. <br><br>
+                        ✔ Resale Assistance – Sell & Earn: Turn your fashion clutter into cash! We handle the reselling process for you. <br>
+                        ✔ Shop Pre-Loved Fashion – Explore our collection of handpicked, pre-loved outfits, shoes, and accessories. <br>
+                        ✔ Donation Coordination – Want to give back? We assist in donating stylish, gently used pieces to those in need. <br><br>
+                        📍 Book a Wardrobe Makeover | 🛍 Shop Now
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- list thumbnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="image/img1.jpg">
+                <div class="content">
+                    <div class="title">Shop Pre-Loved Fashion</div>
+                    <div class="description">
+                        ✔ Elegant & timeless pieces <br>
+                        ✔ Sustainable fashion choices <br>
+                        ✔ Affordable, high-quality styles <br><br>
+                        📍 DM to shop or visit @topitupp.bysalt on Instagram!
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/img2.jpg">
+                <div class="content">
+                    <div class="title">Contact Us</div>
+                    <div class="description">
+                        📩 Let’s Refresh Your Wardrobe! <br>
+                        📞 Contact Us: 08035242723 <br>
+                        📍 Instagram: @topitupp.bysalt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- next prev -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => {
+                document.getElementById("loader").classList.add("hide-loader");
+                document.getElementById("main-content").style.display = "block";
+                document.body.style.overflow = "auto"; // Re-enable scrolling
+            }, 3000); // Adjust timing as needed (3 seconds)
+        });
+    </script>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
